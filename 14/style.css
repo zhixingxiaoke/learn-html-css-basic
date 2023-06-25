@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.page-header .menu {
+    display: none;
+}
+
+.site-name {
+    color: #333333;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.navigation li {
+    display: inline;
+    padding: 0 15px;
+}
+
+.navigation li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    transition: color 0.5s;
+}
+
+.navigation li a:hover {
+    color: #4ac4f3;
+}
+
+.navigation li a.active {
+    color: #4ac4f3;
+}
+
+.login-button {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    color: #4ac4f3;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 12px 36px;
+    box-shadow: 0 0 10px #e7e7e7;
+}
+
+.page-header .container {
+    position: relative;
+    width: 1350px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+    margin-top: 90px;
+}
+
+/* -   背景色: rgba(74, 196, 243, 0.1)
+-   内间距: 10px 20px
+-   圆角: 7px
+-   字体大小: 15px
+-   底部外边距: 30px */
+.banner h4 {
+    background-color: rgba(74, 196, 243, 0.1);
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* -   字体大小: 48px
+-   底部外边距: 50px
+-   字间距: 2px */
+.banner h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* -   字体加粗: bold
+-   圆角: 40px
+-   背景色: #4ac4f3
+-   字体颜色: #ffffff
+-   内间距: 12px 36px */
+.banner button {
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: #4ac4f3;
+    color: #ffffff;
+    padding: 12px 36px;
+}
+
+/* -   定位: absolute
+-   左偏移: 120px
+-   下偏移: 20px
+-   宽度: 150px */
+.banner .banner-left {
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+    width: 150px;
+}
+
+/* -   定位: absolute
+-   右偏移: 0
+-   上偏移: 0
+-   宽度: 350px */
+.banner .banner-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    min-width: 150px;
+    max-width: 350px;
+}
+
+/* -   顶部外间距: 80px
+-   背景色: #4ac4f3
+-   内间距: 60px 0
+-   水平居中 */
+.signup {
+    margin-top: 80px;
+    background-color: #4ac4f3;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* -   字体加粗: bold
+-   字体颜色: #ffffff
+-   字体大小: 18px
+-   底部外边距: 30px */
+.signup h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* -   外间距: 0 7px
+-   圆角: 30px
+-   宽度: 180px
+-   内间距: 14px 20px
+-   边框: 无
+-   box-sizing 用法 */
+.signup input {
+    margin: 0 7px;
+    border-radius: 30px;
+    width: 180px;
+    padding: 14px 20px;
+    border: none;
+}
+
+/* -   字体大小: 14px
+-   外间距: 0 7px
+-   背景色: #ffffff
+-   字体颜色: #4ac4f3
+-   字体加粗: bold
+-   内间距: 12px 36px
+-   圆角: 30px */
+.signup button {
+    font-size: 14px;
+    margin: 0 7px;
+    background-color: #ffffff;
+    color: #4ac4f3;
+    font-weight: bold;
+    padding: 12px 36px;
+    border-radius: 30px;
+}
+
+/* -   宽度: 1140px
+-   内间距: 120px 0 65px 0
+-   文本居中 */
+.feature {
+    background-image: url(./images/bg-feature.png);
+}
+
+.feature .container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 120px 0 65px 0;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 32px;
+}
+
+/* -   顶部外间距: 10px
+-   宽度: 50px
+-   高度: 3px
+-   背景色: #4ac4f3
+-   圆角: 3px */
+.feature .divider {
+    display: inline-block;
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background-color: #4ac4f3;
+    border-radius: 3px;
+    position: relative;
+    left: 10px;
+}
+
+/* -   宽度: 10px
+-   高度: 3px
+-   圆角: 3px */
+.feature .divider::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 3px;
+    background-color: #4ac4f3;
+    border-radius: 3px;
+    position: absolute;
+    left: -15px;
+}
+
+/* -   字体颜色: #666666
+-   顶部外边距: 15px
+-   字体大小: 14px */
+.feature p {
+    color: #666666;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.feature ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+/* -   底部外间距: 50px
+-   内间距: 0 15px */
+.feature ul li {
+    width: 33.3333%;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+/* -   字体大小: 24px
+-   外间距: 20px 0 15px 0 */
+.feature ul li h4 {
+    font-size: 24px;
+    margin: 20px 0 15px 0;
+}
+
+/* -   字体颜色: #666666
+-   字体大小: 14px
+-   行高: 24px */
+.feature ul li p {
+    line-height: 24px;
+}
+
+/* 
+-   背景色: #202942
+-   字体颜色: #f8f9fa */
+.page-footer {
+    background-color: #202942;
+    color: #f8f9fa;
+}
+
+/* -   宽度: 1140px
+-   内间距: 100px 0
+-   水平排列
+-   整体居中 */
+.page-footer .top {
+    width: 1140px;
+    padding: 100px 0;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* 介绍信息
+
+-   flex: 2
+-   右边内间距: 30px
+
+课程信息、社交媒体
+
+-   flex: 1
+-   内间距: 0 15px */
+.page-footer .top .introduction {
+    flex: 2;
+    padding-right: 30px;
+}
+
+.page-footer .top .course,
+.page-footer .top .social-media {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.page-footer .top .contact {
+    width: 96px;
+}
+
+/* 介绍信息 h2
+
+-   字体大小: 20px
+-   底部外间距: 20px
+
+其它信息 h2
+
+-   字体大小: 16px
+-   底部外间距: 20px */
+.page-footer h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.page-footer .top .introduction h2 {
+    font-size: 20px;
+}
+
+/* -   字体颜色: #adb5bd
+-   行高: 24px
+-   字体大小: 14px */
+.page-footer .top .introduction p {
+    color: #adb5bd;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+/* -   顶部外间距: 10px
+-   行高: 24px */
+.page-footer ul li {
+    margin-top: 10px;
+    line-height: 24px;
+}
+
+/* -   字体颜色: #adb5bd
+-   字体大小: 14px */
+.page-footer ul li a {
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+/* -   宽度: 96px
+-   高度: 96px
+-   圆角: 1px */
+.page-footer .top .contact img {
+    width: 96px;
+    height: 96px;
+    border-radius: 1px;
+}
+
+/* -   内间距: 20px 0;
+-   顶部边框: 1px solid rgba(255, 255, 255, 0.1); */
+.page-footer .bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .bottom .container {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-footer .bottom p {
+    font-size: 14px;
+}
+
+/* -   行内显示
+-   左外边距: 20px */
+.page-footer .bottom li {
+    display: inline;
+    margin-left: 20px;
+}
+
+@media (max-width: 1350px) {
+    .page-header .container {
+        width: 100%;
+    }
+
+    .site-name {
+        left: 20px;
+    }
+
+    .login-button {
+        right: 20px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .feature .container,
+    .page-footer .top,
+    .page-footer .bottom .container {
+        width: 100%;
+    }
+
+    .page-footer .top,
+    .page-footer .bottom .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner .banner-left {
+        display: none;
+    }
+
+    .banner h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-header .container {
+        height: auto;
+        min-height: 68px;
+        padding: 20px 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .page-header .navigation {
+        display: none;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .page-header .login-button {
+        display: none;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .page-header .site-name {
+        top: 20px;
+    }
+
+    .page-header .menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: #ffffff;
+    }
+
+    .page-header .navigation li {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .page-header .expanded .navigation {
+        display: block;
+    }
+
+    .page-header .expanded .login-button {
+        display: block;
+    }
+
+    .banner {
+        margin-top: 68px;
+    }
+
+    .signup {
+        padding: 40px 0;
+    }
+
+    .signup form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup input,
+    .signup button {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .feature ul li {
+        width: 50%;
+    }
+
+    .page-footer .top {
+        flex-wrap: wrap;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page-footer .top .introduction {
+        flex: 100%;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .page-footer .top .course {
+        padding-left: 0;
+    }
+}
